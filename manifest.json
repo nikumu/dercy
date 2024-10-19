@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Dercy",
+  "version": "1.0",
+  "description": "Detecta palavrões e substitui por ***",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Dercy",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "100": "icon.png"
+  }
+}
